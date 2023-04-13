@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 # 최소거리로 설치했을때, 모든 라우터를 설치했다면 True를 리턴
 def all_router(router_count,min_distance) -> bool :
     cum_distance = 0
@@ -35,11 +38,7 @@ if __name__ == "__main__":
     house_x.sort()
     distances= []
     for i in range(len(house_x)-1):
-        distances.append(house_x[i+1]-house_x[i])
-    # print(distances)
-    
-    # print(all_router(c,min_distance))
-    
+        distances.append(house_x[i+1]-house_x[i])   
     b_search()
 
     
