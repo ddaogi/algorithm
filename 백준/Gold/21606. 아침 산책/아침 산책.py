@@ -1,11 +1,10 @@
 import sys
 from collections import defaultdict
 input= sys.stdin.readline
-
-
-def dfs(start, cur,visited,cum):
+sys.setrecursionlimit(10**6)
+def dfs(start, cur,visited):
     global count
-    cum = cum + str(cur)
+    # cum = cum + str(cur)
     visited[cur] = True
     if(start!= cur and indoors[cur] == 1):
         # print(cum)
@@ -14,8 +13,9 @@ def dfs(start, cur,visited,cum):
 
     for connected in edges[cur]:
         if not visited[connected]:
-            dfs(start,connected,visited,cum)
+            dfs(start,connected,visited)
             visited[connected]= False
+    visited[cur] = False
 
 
 v = int(input())
@@ -31,10 +31,10 @@ for i in range(v-1):
 
 
 count = 0
+visited = [True] + [False] * v
 
 for i in range(1,v+1):
     if(indoors[i] == 1):
-        visited = [True] + [False] * v
-        dfs(i,i,visited,"")
+        dfs(i,i,visited)
 
 print(count)
