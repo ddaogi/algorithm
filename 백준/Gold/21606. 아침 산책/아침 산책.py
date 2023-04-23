@@ -1,7 +1,7 @@
 import sys
 from collections import defaultdict
 input= sys.stdin.readline
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10**5)
 def dfs(start, cur,visited):
     global count
     # cum = cum + str(cur)
