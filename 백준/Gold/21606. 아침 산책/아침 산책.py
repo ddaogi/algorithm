@@ -1,10 +1,9 @@
 import sys
 from collections import defaultdict
 input= sys.stdin.readline
-sys.setrecursionlimit(10**6)
-def dfs(start, cur,visited,indoors):
+sys.setrecursionlimit(10**5)
+def dfs(start, cur,visited):
     global count
-    # cum = cum + str(cur)
     visited[cur] = True
     if(start!= cur and indoors[cur] == 1):
         # print(cum)
@@ -35,6 +34,6 @@ visited = [True] + [False] * v
 
 for i in range(1,v+1):
     if(indoors[i] == 1):
-        dfs(i,i,visited,indoors)
+        dfs(i,i,visited)
 
 print(count)
