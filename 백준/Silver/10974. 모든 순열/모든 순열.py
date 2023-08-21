@@ -1,6 +1,6 @@
 def dfs(depth, n, acc_str):
     if depth == n:
-        print(acc_str.strip())  # Remove leading space
+        print(acc_str.strip()) 
         return
 
     for i in range(n):
