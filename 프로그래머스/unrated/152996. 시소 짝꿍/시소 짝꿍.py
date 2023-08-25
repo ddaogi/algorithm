@@ -24,21 +24,4 @@ def count_comb(num):
         return 0
     else:
         return num*(num-1)/2
-        
-
-    # for i in range(len(weights)):
-    #     found = False
-    #     for j in range(i+1,len(weights)):
-    #         if(weights[j] > weights[i]*2): break
-    #         for k in cal:
-    #             # print(weights[i]*k,weights[j])
-    #             if weights[i]*k == weights[j]:
-    #                 # print(weights[i],weights[j])
-    #                 answer+=1
-    #                 break
-     # for i in range(len(weights)):
-     #    for k in cal:
-     #        if weights[i]*k in 
-     #            answer+=1
-     #            break
-    return answer
+   
