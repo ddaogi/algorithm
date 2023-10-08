@@ -13,10 +13,7 @@ def solution(book_time):
 
     time_in_mins.sort()
     max_count = 0
-
-
-   
-
+    
     end_times = []
     max_size = 0
     time_idx = 0
@@ -35,5 +32,4 @@ def solution(book_time):
             if(len(end_times) > max_size):
                 max_size = len(end_times)
                     
-    
     return max_size
